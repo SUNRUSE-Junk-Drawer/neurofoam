@@ -42,6 +42,7 @@ export default async function (
       `**/*.js`,
       `**/*.d.ts`,
       `!**/*-tests.*`,
+      `migrations/**/*.sql`,
     ],
     repository: {
       type: `git`,

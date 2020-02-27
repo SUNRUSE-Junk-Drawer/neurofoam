@@ -13,7 +13,8 @@
   "files": [
     "**/*.js",
     "**/*.d.ts",
-    "!**/*-tests.*"
+    "!**/*-tests.*",
+    "migrations/**/*.sql"
   ],
   "repository": {
     "type": "git",
