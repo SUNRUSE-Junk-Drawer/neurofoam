@@ -5,24 +5,29 @@ type Persistence<
   TState extends Json,
   TEvent extends Json,
   > = {
-    get(
+    initialize(): Promise<void>
+
+    getBubble(
       bubbleUuid: string,
     ): Promise<null | {
       readonly state: TState
       readonly versionUuid: string
     }>
 
-    tryCreate(
+    recordFirstEvent(
       bubbleUuid: string,
+      sessionUuid: string,
       event: TEvent,
-      state: TState,
+      resultingState: TState,
     ): Promise<PersistenceResult>
 
-    tryUpdate(
-      bubbleUuid: string,
-      previousVersionUuid: string,
+    recordSubsequentEvent(
+      filename: string,
+      bubbleId: number,
+      previousEventId: number,
+      sessionUuid: string,
       event: TEvent,
-      nextState: TState,
+      resultingState: TState,
     ): Promise<PersistenceResult>
   }
 
