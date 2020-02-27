@@ -22,7 +22,6 @@ type Persistence<
     ): Promise<PersistenceResult>
 
     recordSubsequentEvent(
-      filename: string,
       bubbleId: number,
       previousEventId: number,
       sessionUuid: string,
