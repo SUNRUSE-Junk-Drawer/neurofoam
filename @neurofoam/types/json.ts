@@ -1,15 +1,9 @@
-interface IJsonArray extends ReadonlyArray<Json> { }
-
-interface IJsonObject {
-  readonly [key: string]: Json
-}
-
 type Json =
   | string
   | number
   | boolean
-  | IJsonArray
-  | IJsonObject
+  | ReadonlyArray<Json>
+  | { readonly [key: string]: Json }
   | null
 
 export default Json
