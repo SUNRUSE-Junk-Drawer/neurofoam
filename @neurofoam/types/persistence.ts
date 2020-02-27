@@ -10,12 +10,13 @@ type Persistence<
     getBubble(
       bubbleUuid: string,
     ): Promise<null | {
-      readonly state: TState
-      readonly eventUuid: string
+      readonly currentState: TState
+      readonly latestEventUuid: string
     }>
 
     recordFirstEvent(
       bubbleUuid: string,
+      eventUuid: string,
       sessionUuid: string,
       event: TEvent,
       resultingState: TState,
@@ -23,7 +24,8 @@ type Persistence<
 
     recordSubsequentEvent(
       bubbleUuid: string,
-      previousEventId: string,
+      previousEventUuid: string,
+      nextEventUuid: string,
       sessionUuid: string,
       event: TEvent,
       resultingState: TState,
