@@ -1,0 +1,28 @@
+{
+  "name": "@neurofoam/persistence-memory",
+  "description": "Persists Neurofoam events in a temporary, volatile in-memory store.",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "engineStrict": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "files": [
+    "**/*.js",
+    "**/*.d.ts",
+    "!**/*-tests.*",
+    "migrations/**/*.sql"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jameswilddev/neurofoam"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@neurofoam/types": "0.0.7"
+  },
+  "types": "index.d.ts"
+}
