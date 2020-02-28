@@ -1117,116 +1117,116 @@ describe(`@neurofoam/command-line-helpers`, () => {
       `Argument for command-line parameter "-test-string-b-short-name"/"--test-string-b-long-name" cannot contain more than 4 character(s).`,
     )
 
-    // rejects(
-    //   `when a string is specified twice by short name`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `-test-integer-a-short-name`,
-    //     `-3`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //   ],
-    //   `Command-line parameter "-test-integer-a-short-name"/"--test-integer-a-long-name" specified multiple times.`,
-    // )
+    rejects(
+      `when a string is specified twice by short name`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `-test-string-a-short-name`,
+        `test arg a`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Command-line parameter "-test-string-a-short-name"/"--test-string-a-long-name" specified multiple times.`,
+    )
 
-    // rejects(
-    //   `when a string is specified twice by long name`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `--test-integer-b-long-name`,
-    //     `15`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //   ],
-    //   `Command-line parameter "-test-integer-b-short-name"/"--test-integer-b-long-name" specified multiple times.`,
-    // )
+    rejects(
+      `when a string is specified twice by long name`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `--test-string-b-long-name`,
+        `tqq`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Command-line parameter "-test-string-b-short-name"/"--test-string-b-long-name" specified multiple times.`,
+    )
 
-    // rejects(
-    //   `when a string is specified twice by short then long name`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `-test-integer-b-short-name`,
-    //     `15`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //   ],
-    //   `Command-line parameter "-test-integer-b-short-name"/"--test-integer-b-long-name" specified multiple times.`,
-    // )
+    rejects(
+      `when a string is specified twice by short then long name`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `--test-string-a-long-name`,
+        `q e iiioo`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Command-line parameter "-test-string-a-short-name"/"--test-string-a-long-name" specified multiple times.`,
+    )
 
-    // rejects(
-    //   `when a string is specified twice by long then short name`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `--test-integer-a-long-name`,
-    //     `2`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //   ],
-    //   `Command-line parameter "-test-integer-a-short-name"/"--test-integer-a-long-name" specified multiple times.`,
-    // )
+    rejects(
+      `when a string is specified twice by long then short name`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `-test-string-b-short-name`,
+        `tqq`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Command-line parameter "-test-string-b-short-name"/"--test-string-b-long-name" specified multiple times.`,
+    )
 
-    // rejects(
-    //   `when a string with a short name is given two arguments`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `2`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //   ],
-    //   `Unexpected command-line argument "2".`,
-    // )
+    rejects(
+      `when a string with a short name is given two arguments`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `q e iiioo`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Unexpected command-line argument "q e iiioo".`,
+    )
 
-    // rejects(
-    //   `when a string with a long name is given two arguments`,
-    //   [
-    //     `ignored node process`,
-    //     `ignored javascript file`,
-    //     `-test-string-a-short-name`,
-    //     `t s a arg`,
-    //     `--test-string-b-long-name`,
-    //     `tba`,
-    //     `-test-integer-a-short-name`,
-    //     `-1`,
-    //     `--test-integer-b-long-name`,
-    //     `18`,
-    //     `15`,
-    //   ],
-    //   `Unexpected command-line argument "15".`,
-    // )
+    rejects(
+      `when a string with a long name is given two arguments`,
+      [
+        `ignored node process`,
+        `ignored javascript file`,
+        `-test-string-a-short-name`,
+        `t s a arg`,
+        `--test-string-b-long-name`,
+        `tba`,
+        `tqq`,
+        `-test-integer-a-short-name`,
+        `-1`,
+        `--test-integer-b-long-name`,
+        `18`,
+      ],
+      `Unexpected command-line argument "tqq".`,
+    )
   })
 })
