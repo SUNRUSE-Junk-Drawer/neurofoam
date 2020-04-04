@@ -8,6 +8,7 @@ import FetchedRequest from "./fetched-request"
 type Channel<
   TGetBubbleUuidInstance,
   TGetSessionUuidInstance,
+  TCheckMetadataInstance,
   TGetRequestLengthInstance,
   TGetRequestInstance,
   TRespondWithErrorInstance,
@@ -20,6 +21,10 @@ type Channel<
     getSessionUuid(
       instance: TGetSessionUuidInstance,
     ): Promise<FetchedSessionUuid>
+
+    checkMetadata(
+      instance: TCheckMetadataInstance,
+    ): Promise<boolean>
 
     getRequestLength(
       instance: TGetRequestLengthInstance,
