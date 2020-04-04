@@ -4,7 +4,7 @@ env:
   NEUROFOAM_CI: true
 jobs:
   commit-changes:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && github.repository == 'jameswilddev/neurofoam'
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -37,7 +37,7 @@ jobs:
     - run: npm run-script buildTypeScript
     - run: npm run-script buildNyc
   release:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && github.repository == 'jameswilddev/neurofoam'
     needs: build
     runs-on: ubuntu-18.04
     steps:
