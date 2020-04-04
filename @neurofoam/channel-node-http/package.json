@@ -22,6 +22,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@neurofoam/types": "0.0.11"
+    "@neurofoam/types": "0.0.12"
   }
 }
