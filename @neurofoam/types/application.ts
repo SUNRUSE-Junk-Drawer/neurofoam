@@ -4,8 +4,8 @@ import RequestResult from "./request-result"
 
 type Application<
   TState extends Json,
-  TRequest extends Json,
   TEvent extends Json,
+  TRequest extends Json,
   > = {
     readonly initialState: TState
 
