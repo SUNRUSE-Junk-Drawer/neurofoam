@@ -13,8 +13,8 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run buildToolsTypeScript
-    - run: npm run buildToolsRun
+    - run: npm run-script buildToolsTypeScript
+    - run: npm run-script buildToolsRun
     - run: git config user.email jameswilddev@outlook.com
     - run: git config user.name jameswilddev
     - run: git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
@@ -32,8 +32,8 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run buildToolsTypeScript
-    - run: npm run buildToolsRun
+    - run: npm run-script buildToolsTypeScript
+    - run: npm run-script buildToolsRun
     - run: npm run-script buildTypeScript
     - run: npm run-script buildNyc
   release:
@@ -47,8 +47,8 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
-    - run: npm run buildToolsTypeScript
-    - run: npm run buildToolsRun
+    - run: npm run-script buildToolsTypeScript
+    - run: npm run-script buildToolsRun
     - run: npm run-script buildTypeScript
     - run: echo ${{ secrets.npmrc }} > ${NPM_CONFIG_USERCONFIG}
-    - run: npm run buildToolsPublish
+    - run: npm run-script buildToolsPublish
