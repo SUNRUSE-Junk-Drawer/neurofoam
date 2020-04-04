@@ -5,5 +5,6 @@ export default async function (
   name: ReadonlyArray<string>,
 ): Promise<void> {
   console.log(`Installing dependencies...`)
-  console.log(await runCommandLine(`npm install --prefix ${path.join.apply(path, name.slice())}`))
+  const command = process.env.NEUROFOAM_CI ? `ci` : `install`
+  console.log(await runCommandLine(`npm ${command} --prefix ${path.join.apply(path, name.slice())}`))
 }
