@@ -1,7 +1,5 @@
 name: Continuous Integration
 on: [push, pull_request]
-env:
-  NEUROFOAM_CI: true
 jobs:
   commit-changes:
     if: github.ref == 'refs/heads/master' && github.repository == 'jameswilddev/neurofoam'
@@ -12,7 +10,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm ci
+    - run: npm install
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
     - run: git config user.email jameswilddev@outlook.com
@@ -31,7 +29,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm ci
+    - run: npm install
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
     - run: npm run-script buildTypeScript
@@ -46,7 +44,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-    - run: npm ci
+    - run: npm install
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
     - run: npm run-script buildTypeScript
