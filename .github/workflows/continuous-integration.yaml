@@ -1,5 +1,7 @@
 name: Continuous Integration
 on: [push, pull_request]
+env:
+  NEUROFOAM_CI: true
 jobs:
   commit-changes:
     runs-on: ubuntu-18.04
