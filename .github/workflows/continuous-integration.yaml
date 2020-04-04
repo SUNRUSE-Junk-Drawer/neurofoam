@@ -37,6 +37,8 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
+    - run: npm run buildToolsTypeScript
+    - run: npm run buildTools
     - run: npm run-script buildTypeScript
     - run: npm run-script buildNyc
   release:
