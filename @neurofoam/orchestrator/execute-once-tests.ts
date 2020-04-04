@@ -258,7 +258,10 @@ describe(`@neurofoam/orchestrator`, () => {
             recordSubsequentEvent: persistenceRecordSubsequentEvent,
           }
 
-          applicationRequestCallback = jasmine.createSpy(`applicationRequestCallback`)
+          applicationRequestCallback = jasmine.createSpy(`applicationRequestCallback`).and.returnValue(Promise.resolve({
+            response: `Test Application Response`,
+            event: null,
+          }))
           applicationApplyEvent = jasmine.createSpy(`applicationApplyEvent`)
           application = {
             initialState: `Test Initial State`,
