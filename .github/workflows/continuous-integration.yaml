@@ -48,4 +48,5 @@ jobs:
     steps:
       - run: npm ci
       - run: npm run buildToolsTypeScript
+      - run: npm run buildToolsRun
       - run: npm run buildToolsPublish
