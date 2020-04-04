@@ -16,10 +16,17 @@
     "@types/node": "12.12.34",
     "del-cli": "3.0.0",
     "jasmine": "3.5.0",
+    "npm-run-all": "4.1.5",
     "nyc": "15.0.1",
     "typescript": "3.8.3"
   },
   "scripts": {
-    "test": "del-cli '**/*.js' '**/*.d.ts' '!**/node_modules/**/*' && tsc --project tools.tsconfig.json && node build && tsc --project packages.tsconfig.json && nyc --check-coverage --all --exclude \"**/*-tests.*\" --exclude \"build/**/*\" --exclude \"publish/**/*\" --lines 100 --functions 100 --branches 100 --statements 100 jasmine --config=jasmine.json"
+    "buildClean": "del-cli '**/*.js' '**/*.d.ts' '!**/node_modules/**/*'",
+    "buildToolsTypeScript": "tsc --project tools.tsconfig.json",
+    "buildToolsRun": "node build",
+    "buildTypeScript": "tsc --project packages.tsconfig.json",
+    "buildNyc": "nyc --check-coverage --all --exclude \"**/*-tests.*\" --exclude \"build/**/*\" --exclude \"publish/**/*\" --lines 100 --functions 100 --branches 100 --statements 100 npm run-script buildJasmine",
+    "buildJasmine": "jasmine --config=jasmine.json",
+    "test": "npm-run-all buildClean buildToolsTypeScript buildToolsRun buildTypeScript buildNyc buildJasmine"
   }
 }
