@@ -28,6 +28,6 @@
     "buildNyc": "nyc --check-coverage --all --exclude \"**/*-tests.*\" --exclude \"build/**/*\" --exclude \"publish/**/*\" --lines 100 --functions 100 --branches 100 --statements 100 npm run-script buildJasmine",
     "buildJasmine": "jasmine --config=jasmine.json",
     "buildToolsPublish": "node publish",
-    "test": "npm-run-all buildClean buildToolsTypeScript buildToolsRun buildTypeScript buildNyc buildJasmine"
+    "test": "npm-run-all buildClean buildToolsTypeScript buildToolsRun buildTypeScript buildNyc"
   }
 }
