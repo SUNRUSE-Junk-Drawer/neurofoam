@@ -15,7 +15,7 @@ type Application<
 
     requestCallback(
       state: TState,
-      sessionKey: string,
+      sessionUuid: string,
       request: TRequest,
     ): Promise<RequestResult<TEvent>>
 
