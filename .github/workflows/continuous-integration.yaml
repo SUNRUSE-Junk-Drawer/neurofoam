@@ -49,5 +49,5 @@ jobs:
     - run: npm ci
     - run: npm run buildToolsTypeScript
     - run: npm run buildToolsRun
-    - run: echo ${{ secrets.npmrc }} > ~/.npmrc
+    - run: echo ${{ secrets.npmrc }} > ${NPM_CONFIG_USERCONFIG}
     - run: npm run buildToolsPublish
