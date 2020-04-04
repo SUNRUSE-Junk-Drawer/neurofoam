@@ -110,7 +110,7 @@ describe(`@neurofoam/persistence-sqlite`, () => {
           }
         }
 
-        fs.promises.copyFile(path.join(__dirname, `recover-001.sqlite`), filename)
+        await fs.promises.copyFile(path.join(__dirname, `recover-001.sqlite`), filename)
 
         instance = new NeurofoamPersistenceSqlite<TestState, TestEvent>(filename)
 
