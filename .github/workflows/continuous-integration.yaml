@@ -4,6 +4,7 @@ env:
   NEUROFOAM_CI: true
 jobs:
   commit-changes:
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -20,7 +21,6 @@ jobs:
     - run: git add .
     - run: git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated changes from build tools."; git push)
   build:
-    needs: commit-changes
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
