@@ -287,9 +287,7 @@ describe(`@neurofoam/orchestrator`, () => {
         it(`uses the bubble's current state when processing requests`, () => expect(applicationRequestCallback).toHaveBeenCalledWith(`Test Initial State`, jasmine.any(String), jasmine.any(String)))
         it(`uses the session uuid when processing requests`, () => expect(applicationRequestCallback).toHaveBeenCalledWith(jasmine.any(String), `Test Session Uuid`, jasmine.any(String)))
         it(`uses the request when processing requests`, () => expect(applicationRequestCallback).toHaveBeenCalledWith(jasmine.any(String), jasmine.any(String), `Test Request`))
-        it(`applies one event`, () => expect(applicationApplyEvent).toHaveBeenCalledTimes(1))
-        it(`uses the bubble's current state when applying events`, () => expect(applicationApplyEvent).toHaveBeenCalledWith(`Test Current State`, jasmine.any(String)))
-        it(`uses the application's returned event when applying events`, () => expect(applicationApplyEvent).toHaveBeenCalledWith(jasmine.any(String), `Test Event`))
+        it(`does not apply any events`, () => expect(applicationApplyEvent).not.toHaveBeenCalled())
 
         it(`returns the application's response`, () => expect(result).toEqual(`Test Application Response`))
       })
