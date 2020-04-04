@@ -6,9 +6,9 @@ Connects a set of Neurofoam type implementations to make a running application.
 
 This package has the following runtime dependencies:
 
-Name       | Version                                                                                           
----------- | --------------------------------------------------------------------------------------------------
-jsonschema | [![^1.2.5](https://img.shields.io/npm/v/jsonschema.svg)](https://www.npmjs.com/package/jsonschema)
+Name       | Version                                                                                          
+---------- | -------------------------------------------------------------------------------------------------
+jsonschema | [![1.2.6](https://img.shields.io/npm/v/jsonschema.svg)](https://www.npmjs.com/package/jsonschema)
 
 ## License
 
