@@ -14,8 +14,8 @@ jobs:
     - run: npm ci
     - run: npm run buildToolsTypeScript
     - run: npm run buildToolsRun
-    - run: git config user.email "jameswilddev"
-    - run: git config user.name "jameswilddev@outlook.com"
+    - run: git config user.email jameswilddev@outlook.com
+    - run: git config user.name jameswilddev
     - run: git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
     - run: git add .
     - run: git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generated changes from build tools."; git push)
