@@ -46,8 +46,8 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm run buildToolsTypeScript
-      - run: npm run buildToolsRun
-      - run: echo ${{ secrets.npmrc }} > ~/.npmrc
-      - run: npm run buildToolsPublish
+    - run: npm ci
+    - run: npm run buildToolsTypeScript
+    - run: npm run buildToolsRun
+    - run: echo ${{ secrets.npmrc }} > ~/.npmrc
+    - run: npm run buildToolsPublish
