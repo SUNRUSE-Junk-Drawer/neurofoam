@@ -26,6 +26,5 @@
   },
   "devDependencies": {
     "@neurofoam/types": "0.0.8"
-  },
-  "types": "index.d.ts"
+  }
 }
