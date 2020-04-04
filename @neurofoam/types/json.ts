@@ -1,8 +1,10 @@
+interface JsonArray extends ReadonlyArray<Json> { }
+
 type Json =
   | string
   | number
   | boolean
-  | ReadonlyArray<Json>
+  | JsonArray
   | { readonly [key: string]: Json }
   | null
 
