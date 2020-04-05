@@ -1,8 +1,4 @@
 type GetRequestInstanceRequest = {
-  readonly headers: {
-    readonly "content-length"?: string
-  }
-
   addListener(event: `error`, listener: (err: Error) => void): GetRequestInstanceRequest
   addListener(event: `aborted`, listener: () => void): GetRequestInstanceRequest
   addListener(event: `data`, listener: (chunk: Buffer) => void): GetRequestInstanceRequest
