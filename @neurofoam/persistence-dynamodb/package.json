@@ -1,0 +1,33 @@
+{
+  "name": "@neurofoam/persistence-dynamodb",
+  "description": "Persists Neurofoam events in a DynamoDB instance.",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "engineStrict": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "files": [
+    "**/*.js",
+    "**/*.d.ts",
+    "!**/*-tests.*",
+    "migrations/**/*.sql"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jameswilddev/neurofoam"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.653.0"
+  },
+  "devDependencies": {
+    "@neurofoam/types": "0.0.14",
+    "@types/local-dynamo": "^0.5.0",
+    "local-dynamo": "^0.5.0"
+  },
+  "types": "index.d.ts"
+}
