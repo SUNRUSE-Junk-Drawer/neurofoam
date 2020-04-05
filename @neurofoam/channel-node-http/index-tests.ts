@@ -2,6 +2,7 @@
 // the coverage.
 import "./get-bubble-uuid-instance"
 import "./get-session-uuid-instance"
+import "./check-metadata-instance"
 import "./get-request-length-instance"
 import "./get-request-instance"
 import "./respond-with-error-instance"
