@@ -1,4 +1,4 @@
-const regex = /(?:^|,)\s*(?:application|\*)\s*\/\s*(?:json|\*)(?:;|\s|,|;|$)/
+const regex = /(?:^|,)\s*(?:application|\*)\s*\/\s*(?:json|\*)(?:\s|,|;|$)/
 
 export default function (
   accept: undefined | string,
