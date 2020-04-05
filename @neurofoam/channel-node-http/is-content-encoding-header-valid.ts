@@ -1,4 +1,4 @@
-const regex = /^\s*identity\s*(?:,\s*identity\s*)*$/
+const regex = /^\s*identity\s*(?:,\s*identity\s*)*$/i
 
 export default function (
   contentEncoding: undefined | string,

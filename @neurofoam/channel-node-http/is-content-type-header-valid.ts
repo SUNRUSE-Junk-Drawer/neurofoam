@@ -1,4 +1,4 @@
-const regex = /^\s*application\s*\/\s*json\s*(?:;\s*charset\s*=\s*utf-8\s*)?$/
+const regex = /^\s*application\s*\/\s*json\s*(?:;\s*charset\s*=\s*utf-8\s*)?$/i
 
 export default function (
   accept: undefined | string,
