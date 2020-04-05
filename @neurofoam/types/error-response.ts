@@ -10,5 +10,6 @@ type ErrorResponse =
   | `requestFailsSchemaValidation`
   | `requestShorterThanIndicated`
   | `requestLongerThanIndicated`
+  | `invalidRequestLength`
 
 export default ErrorResponse
