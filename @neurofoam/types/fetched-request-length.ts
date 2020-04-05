@@ -6,5 +6,8 @@ type FetchedRequestLength =
   | {
     readonly type: `none`
   }
+  | {
+    readonly type: `invalid`
+  }
 
 export default FetchedRequestLength
