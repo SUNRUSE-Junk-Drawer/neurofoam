@@ -8,5 +8,7 @@ type ErrorResponse =
   | `requestIncorrectlyEncoded`
   | `nonJsonRequest`
   | `requestFailsSchemaValidation`
+  | `requestShorterThanIndicated`
+  | `requestLongerThanIndicated`
 
 export default ErrorResponse
