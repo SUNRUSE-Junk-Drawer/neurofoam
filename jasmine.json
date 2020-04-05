@@ -1,7 +1,8 @@
 {
   "spec_dir": "@neurofoam",
   "spec_files": [
-    "**/*-tests.js"
+    "**/*-tests.js",
+    "!**/node_modules/**"
   ],
   "oneFailurePerSpec": true,
   "random": true
