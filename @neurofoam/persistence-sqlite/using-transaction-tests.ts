@@ -30,7 +30,7 @@ describe(`@neurofoam/persistence-sqlite`, () => {
       let filename: string
       let body: jasmine.Spy
       let closedAtTimeOfBodyCallback: boolean
-      let pragmaForeignKeys: { foreign_keys: 0 | 1 }
+      let pragmaForeignKeys: undefined | { foreign_keys: 0 | 1 }
       let capturedDatabase: sqlite.Database
       let result: string
 
@@ -81,7 +81,7 @@ describe(`@neurofoam/persistence-sqlite`, () => {
       let filename: string
       let body: jasmine.Spy
       let closedAtTimeOfBodyCallback: boolean
-      let pragmaForeignKeys: { foreign_keys: 0 | 1 }
+      let pragmaForeignKeys: undefined | { foreign_keys: 0 | 1 }
       let capturedDatabase: sqlite.Database
       let thrown: string
 
