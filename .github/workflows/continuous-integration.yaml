@@ -31,6 +31,7 @@ jobs:
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
+    - uses: actions/setup-java@v1
     - run: npm ci
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
