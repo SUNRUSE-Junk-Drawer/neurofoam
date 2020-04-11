@@ -19,6 +19,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
 
     function dynamoDbSettings(port: number): awsSdk.DynamoDB.ClientConfiguration {
       return {
+        credentials: new awsSdk.Credentials(`Test Access Key Id`, `Test Secret Access Key`),
         endpoint: `http://localhost:${port}`,
         region: `local`,
       }
