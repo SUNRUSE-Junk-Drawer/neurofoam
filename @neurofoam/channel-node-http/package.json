@@ -1,7 +1,7 @@
 {
   "name": "@neurofoam/channel-node-http",
   "description": "A Neurofoam channel implementation which works with Node HTTP request/responses.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": ">=12.13.0"
   },
