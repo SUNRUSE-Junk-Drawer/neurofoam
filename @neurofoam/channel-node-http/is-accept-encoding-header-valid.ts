@@ -1,15 +1,15 @@
 const regex = /(?:^|,)\s*(?:identity|\*)(?:;|\s|,|$)/i
 
 export default function (
-  accept: undefined | string,
+  acceptEncoding: undefined | string,
 ): boolean {
-  if (accept === undefined) {
+  if (acceptEncoding === undefined) {
     return true
   }
 
-  if (accept.trim() === ``) {
+  if (acceptEncoding.trim() === ``) {
     return true
   }
 
-  return regex.test(accept)
+  return regex.test(acceptEncoding)
 }
