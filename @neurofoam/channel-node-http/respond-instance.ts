@@ -1,6 +1,6 @@
 type RespondInstanceResponse = {
-  writeHead(statusCode: number, headers: {
-    readonly Authorization?: string
+  writeHead(statusCode: number, headers?: {
+    readonly Authorization: string
   }): RespondInstanceResponse
   end(data: string, callback: Function): RespondInstanceResponse
 }
