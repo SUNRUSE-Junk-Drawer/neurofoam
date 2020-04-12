@@ -28,16 +28,16 @@ describe(`@neurofoam/command-line-helpers`, () => {
         }
         const originalProcess = process
 
-        beforeAll((done) => {
+        beforeAll(async () => {
           const globalAny = (global as any)
           globalAny.console = mockConsole
           globalAny.process = mockProcess
           runMain(main)
-          setTimeout(() => {
-            global.console = originalConsole
-            global.process = originalProcess
-            done()
-          }, 100)
+
+          await new Promise(resolve => setTimeout(resolve, 100))
+
+          global.console = originalConsole
+          global.process = originalProcess
         })
 
         assert(
