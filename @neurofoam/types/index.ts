@@ -19,3 +19,5 @@ export { default as FetchedRequestLength } from "./fetched-request-length"
 export { default as FetchedRequest } from "./fetched-request"
 
 export { default as Channel } from "./channel"
+
+export { default as Cache } from "./cache"
