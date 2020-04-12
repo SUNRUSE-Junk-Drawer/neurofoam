@@ -2,8 +2,10 @@ type CheckMetadataInstanceRequest = {
   readonly method?: string
   readonly headers: {
     "content-type"?: string
-    "accept"?: string
     "content-encoding"?: string
+    "accept"?: string
+    "accept-charset"?: string
+    "accept-encoding"?: string
   }
 }
 
