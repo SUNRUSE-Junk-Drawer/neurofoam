@@ -8,7 +8,7 @@ This package has the following runtime dependencies:
 
 Name    | Version                                                                                    
 ------- | -------------------------------------------------------------------------------------------
-sqlite  | [![4.0.5](https://img.shields.io/npm/v/sqlite.svg)](https://www.npmjs.com/package/sqlite)  
+sqlite  | [![4.0.7](https://img.shields.io/npm/v/sqlite.svg)](https://www.npmjs.com/package/sqlite)  
 sqlite3 | [![4.1.1](https://img.shields.io/npm/v/sqlite3.svg)](https://www.npmjs.com/package/sqlite3)
 
 ## License
