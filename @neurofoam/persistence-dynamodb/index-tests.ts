@@ -295,12 +295,16 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
                 LastIncreaseDateTime: jasmine.any(Date),
                 LastDecreaseDateTime: jasmine.any(Date),
                 NumberOfDecreasesToday: jasmine.any(Number),
-                "ReadCapacityUnits": 1,
-                "WriteCapacityUnits": 1,
+                "ReadCapacityUnits": 0,
+                "WriteCapacityUnits": 0,
               },
               TableSizeBytes: jasmine.any(Number),
               ItemCount: jasmine.any(Number),
               TableArn: jasmine.any(String),
+              BillingModeSummary: {
+                BillingMode: `PAY_PER_REQUEST`,
+                LastUpdateToPayPerRequestDateTime: jasmine.any(Date),
+              },
             },
           } as any)
       )
@@ -411,12 +415,16 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
                 LastIncreaseDateTime: jasmine.any(Date),
                 LastDecreaseDateTime: jasmine.any(Date),
                 NumberOfDecreasesToday: jasmine.any(Number),
-                "ReadCapacityUnits": 1,
-                "WriteCapacityUnits": 1,
+                "ReadCapacityUnits": 0,
+                "WriteCapacityUnits": 0,
               },
               TableSizeBytes: jasmine.any(Number),
               ItemCount: jasmine.any(Number),
               TableArn: jasmine.any(String),
+              BillingModeSummary: {
+                BillingMode: `PAY_PER_REQUEST`,
+                LastUpdateToPayPerRequestDateTime: jasmine.any(Date),
+              },
             },
           } as any)
       )
@@ -556,12 +564,16 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
                 LastIncreaseDateTime: jasmine.any(Date),
                 LastDecreaseDateTime: jasmine.any(Date),
                 NumberOfDecreasesToday: jasmine.any(Number),
-                "ReadCapacityUnits": 1,
-                "WriteCapacityUnits": 1,
+                "ReadCapacityUnits": 0,
+                "WriteCapacityUnits": 0,
               },
               TableSizeBytes: jasmine.any(Number),
               ItemCount: jasmine.any(Number),
               TableArn: jasmine.any(String),
+              BillingModeSummary: {
+                BillingMode: `PAY_PER_REQUEST`,
+                LastUpdateToPayPerRequestDateTime: jasmine.any(Date),
+              },
             },
           } as any)
       )
