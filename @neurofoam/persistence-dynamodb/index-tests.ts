@@ -667,7 +667,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         }, eventTableSettings).initialize()
 
         instance = new NeurofoamPersistenceDynamoDb<TestState, TestEvent>(dynamoDbSettings(61347), bubbleTableSettings, eventTableSettings)
-      })
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
