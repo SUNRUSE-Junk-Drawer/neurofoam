@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "2.656.0"
+    "aws-sdk": "2.657.0"
   },
   "devDependencies": {
     "@neurofoam/types": "0.0.16",
