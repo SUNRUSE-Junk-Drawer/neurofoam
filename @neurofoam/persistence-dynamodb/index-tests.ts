@@ -138,7 +138,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
             testBubbleTableTagCKey: `Test Bubble Table Tag C Value`,
           },
         }, eventTableSettings)
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -180,7 +180,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
             testEventTableTagCKey: `Test Event Table Tag C Value`,
           },
         })
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -230,7 +230,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         instance = new NeurofoamPersistenceDynamoDb<TestState, TestEvent>(dynamoDbSettings(61343), bubbleTableSettings, eventTableSettings)
 
         await instance.initialize()
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -350,7 +350,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         await instance.recordSubsequentEvent(updateConflictBBubbleUuid, updateConflictBEventUuidA, updateConflictBEventUuidB, sessionUuidM, { eventValue: `Test Event Value M` }, { stateValue: `Test State Value M` })
         await instance.recordSubsequentEvent(updateConflictBBubbleUuid, updateConflictBEventUuidB, updateConflictBEventUuidC, sessionUuidN, { eventValue: `Test Event Value N` }, { stateValue: `Test State Value N` })
         resultOfUpdateConflictB = await instance.recordSubsequentEvent(updateConflictBBubbleUuid, updateConflictBEventUuidA, updateConflictBEventUuidD, sessionUuidO, { eventValue: `Test Event Value O` }, { stateValue: `Test State Value O` })
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -499,7 +499,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         instance = new NeurofoamPersistenceDynamoDb<TestState, TestEvent>(dynamoDbSettings(61345), bubbleTableSettings, eventTableSettings)
 
         await instance.initialize()
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -637,7 +637,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         }, eventTableSettings).initialize()
 
         instance = new NeurofoamPersistenceDynamoDb<TestState, TestEvent>(dynamoDbSettings(61346), bubbleTableSettings, eventTableSettings)
-      }, 10000)
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
@@ -679,7 +679,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         }, eventTableSettings).initialize()
 
         instance = new NeurofoamPersistenceDynamoDb<TestState, TestEvent>(dynamoDbSettings(61347), bubbleTableSettings, eventTableSettings)
-      })
+      }, 20000)
 
       afterAll(async () => {
         dynamoDbProcess.kill()
