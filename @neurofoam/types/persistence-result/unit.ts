@@ -1,1 +1,1 @@
-import "../fetched-bubble-uuid";
+import ".";
