@@ -1,23 +1,21 @@
 import * as jsonschema from "jsonschema";
 import { Json } from "../json";
-import { RequestResult } from "../request-result";
 
 export type Application<
   TState extends Json,
-  TEvent extends Json,
-  TRequest extends Json
+  TCommands extends { readonly [command: string]: Json }
 > = {
   readonly initialState: TState;
 
-  readonly requestLengthLimit: number;
+  readonly commands: {
+    readonly [TCommand in keyof TCommands]: {
+      readonly jsonSchema: jsonschema.Schema;
 
-  readonly requestSchema: jsonschema.Schema;
-
-  requestCallback(
-    state: TState,
-    sessionUuid: string,
-    request: TRequest
-  ): Promise<RequestResult<TEvent>>;
-
-  applyEvent(state: TState, event: TEvent): TState;
+      apply(
+        state: TState,
+        command: TCommands[TCommand],
+        sessionUuid: string
+      ): TState;
+    };
+  };
 };
