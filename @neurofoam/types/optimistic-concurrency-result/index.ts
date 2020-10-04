@@ -1,3 +1,3 @@
-export type PersistenceResult =
+export type OptimisticConcurrencyResult =
   | `successful`
   | `optimisticConcurrencyControlCollision`;
