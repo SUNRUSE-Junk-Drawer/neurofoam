@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "sqlite": "4.0.7",
+    "sqlite": "4.0.15",
     "sqlite3": "5.0.0"
   },
   "devDependencies": {
