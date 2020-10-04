@@ -1,5 +1,5 @@
-import { Json } from "./json";
-import { PersistenceResult } from "./persistence-result";
+import { Json } from "../json";
+import { PersistenceResult } from "../persistence-result";
 
 export type Persistence<TState extends Json, TEvent extends Json> = {
   initialize(): Promise<void>;

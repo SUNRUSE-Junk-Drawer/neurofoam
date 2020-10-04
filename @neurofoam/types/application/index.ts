@@ -1,6 +1,6 @@
 import * as jsonschema from "jsonschema";
-import { Json } from "./json";
-import { RequestResult } from "./request-result";
+import { Json } from "../json";
+import { RequestResult } from "../request-result";
 
 export type Application<
   TState extends Json,
