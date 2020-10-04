@@ -1,4 +1,4 @@
-interface JsonArray extends ReadonlyArray<Json> { }
+type JsonArray = ReadonlyArray<Json>;
 
 type Json =
   | string
@@ -6,6 +6,6 @@ type Json =
   | boolean
   | JsonArray
   | { readonly [key: string]: Json }
-  | null
+  | null;
 
-export default Json
+export default Json;

@@ -8,10 +8,11 @@
     "incremental": false,
     "inlineSourceMap": false,
     "inlineSources": false,
-    "jsx": "preserve",
+    "jsx": "react",
+    "jsxFactory": "superfine.h",
     "listFiles": false,
     "module": "none",
-    "newLine": "CRLF",
+    "newLine": "LF",
     "noEmit": false,
     "noEmitHelpers": false,
     "noEmitOnError": true,
@@ -33,7 +34,7 @@
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false,
     "stripInternal": true,
-    "target": "es2018",
+    "target": "ES2018",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
@@ -62,7 +63,8 @@
     "declarationMap": false,
     "resolveJsonModule": false,
     "lib": [
-      "es2018"
+      "ES2019",
+      "DOM"
     ]
   }
 }

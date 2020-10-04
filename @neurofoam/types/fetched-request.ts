@@ -1,22 +1,22 @@
 type FetchedRequest =
   | {
-    readonly type: `successful`
-    readonly request: string
-  }
+      readonly type: `successful`;
+      readonly request: string;
+    }
   | {
-    readonly type: `tooLong`
-  }
+      readonly type: `tooLong`;
+    }
   | {
-    readonly type: `tooShort`
-  }
+      readonly type: `tooShort`;
+    }
   | {
-    readonly type: `invalidEncoding`
-  }
+      readonly type: `invalidEncoding`;
+    }
   | {
-    readonly type: `aborted`
-  }
+      readonly type: `aborted`;
+    }
   | {
-    readonly type: `error`
-  }
+      readonly type: `error`;
+    };
 
-export default FetchedRequest
+export default FetchedRequest;

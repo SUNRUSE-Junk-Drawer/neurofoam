@@ -1,7 +1,7 @@
 type GetBubbleUuidInstance = {
   readonly request: {
-    readonly url?: string
-  }
-}
+    readonly url?: string;
+  };
+};
 
-export default GetBubbleUuidInstance
+export default GetBubbleUuidInstance;

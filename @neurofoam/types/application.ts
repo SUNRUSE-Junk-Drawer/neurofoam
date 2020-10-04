@@ -1,28 +1,25 @@
-import * as jsonschema from "jsonschema"
-import Json from "./json"
-import RequestResult from "./request-result"
+import * as jsonschema from "jsonschema";
+import Json from "./json";
+import RequestResult from "./request-result";
 
 type Application<
   TState extends Json,
   TEvent extends Json,
-  TRequest extends Json,
-  > = {
-    readonly initialState: TState
+  TRequest extends Json
+> = {
+  readonly initialState: TState;
 
-    readonly requestLengthLimit: number
+  readonly requestLengthLimit: number;
 
-    readonly requestSchema: jsonschema.Schema
+  readonly requestSchema: jsonschema.Schema;
 
-    requestCallback(
-      state: TState,
-      sessionUuid: string,
-      request: TRequest,
-    ): Promise<RequestResult<TEvent>>
+  requestCallback(
+    state: TState,
+    sessionUuid: string,
+    request: TRequest
+  ): Promise<RequestResult<TEvent>>;
 
-    applyEvent(
-      state: TState,
-      event: TEvent,
-    ): TState
-  }
+  applyEvent(state: TState, event: TEvent): TState;
+};
 
-export default Application
+export default Application;

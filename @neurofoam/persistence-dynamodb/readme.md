@@ -10,6 +10,10 @@ Name    | Version
 ------- | ---------------------------------------------------------------------------------------------
 aws-sdk | [![2.657.0](https://img.shields.io/npm/v/aws-sdk.svg)](https://www.npmjs.com/package/aws-sdk)
 
+## Peer Dependencies
+
+This package has no runtime peer dependencies (it does not expect any other packages to be installed alongside itself).
+
 ## License
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjameswilddev%2Fneurofoam.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjameswilddev%2Fneurofoam?ref=badge_large)

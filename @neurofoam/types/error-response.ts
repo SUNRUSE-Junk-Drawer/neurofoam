@@ -10,6 +10,6 @@ type ErrorResponse =
   | `requestFailsSchemaValidation`
   | `requestShorterThanIndicated`
   | `requestLongerThanIndicated`
-  | `invalidRequestLength`
+  | `invalidRequestLength`;
 
-export default ErrorResponse
+export default ErrorResponse;

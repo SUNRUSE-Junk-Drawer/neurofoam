@@ -1,9 +1,9 @@
 type GetRequestLengthInstance = {
   readonly request: {
     readonly headers: {
-      readonly "content-length"?: string
-    }
-  }
-}
+      readonly "content-length"?: string;
+    };
+  };
+};
 
-export default GetRequestLengthInstance
+export default GetRequestLengthInstance;

@@ -1,8 +1,8 @@
-import Json from "./json"
+import Json from "./json";
 
 type Cache<TValue extends Json> = {
-  get(key: string): Promise<undefined | TValue>
-  set(key: string, value: TValue): Promise<void>
-}
+  get(key: string): Promise<undefined | TValue>;
+  set(key: string, value: TValue): Promise<void>;
+};
 
-export default Cache
+export default Cache;

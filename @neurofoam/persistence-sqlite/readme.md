@@ -11,6 +11,10 @@ Name    | Version
 sqlite  | [![4.0.7](https://img.shields.io/npm/v/sqlite.svg)](https://www.npmjs.com/package/sqlite)  
 sqlite3 | [![4.1.1](https://img.shields.io/npm/v/sqlite3.svg)](https://www.npmjs.com/package/sqlite3)
 
+## Peer Dependencies
+
+This package has no runtime peer dependencies (it does not expect any other packages to be installed alongside itself).
+
 ## License
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjameswilddev%2Fneurofoam.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjameswilddev%2Fneurofoam?ref=badge_large)

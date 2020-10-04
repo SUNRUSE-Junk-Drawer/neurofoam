@@ -1,7 +1,5 @@
-const allPackages: {
-  readonly name: string
-  readonly version: string
-  readonly description: string
-}[] = []
-
-export default allPackages
+export const allPackages: {
+  readonly name: string;
+  readonly version: string;
+  readonly description: string;
+}[] = [];

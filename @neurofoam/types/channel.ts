@@ -1,9 +1,9 @@
-import Json from "./json"
-import ErrorResponse from "./error-response"
-import FetchedBubbleUuid from "./fetched-bubble-uuid"
-import FetchedSessionUuid from "./fetched-session-uuid"
-import FetchedRequestLength from "./fetched-request-length"
-import FetchedRequest from "./fetched-request"
+import Json from "./json";
+import ErrorResponse from "./error-response";
+import FetchedBubbleUuid from "./fetched-bubble-uuid";
+import FetchedSessionUuid from "./fetched-session-uuid";
+import FetchedRequestLength from "./fetched-request-length";
+import FetchedRequest from "./fetched-request";
 
 type Channel<
   TGetBubbleUuidInstance,
@@ -12,39 +12,35 @@ type Channel<
   TGetRequestLengthInstance,
   TGetRequestInstance,
   TRespondWithErrorInstance,
-  TRespondInstance,
-  > = {
-    getBubbleUuid(
-      instance: TGetBubbleUuidInstance,
-    ): Promise<FetchedBubbleUuid>
+  TRespondInstance
+> = {
+  getBubbleUuid(instance: TGetBubbleUuidInstance): Promise<FetchedBubbleUuid>;
 
-    getSessionUuid(
-      instance: TGetSessionUuidInstance,
-    ): Promise<FetchedSessionUuid>
+  getSessionUuid(
+    instance: TGetSessionUuidInstance
+  ): Promise<FetchedSessionUuid>;
 
-    checkMetadata(
-      instance: TCheckMetadataInstance,
-    ): Promise<boolean>
+  checkMetadata(instance: TCheckMetadataInstance): Promise<boolean>;
 
-    getRequestLength(
-      instance: TGetRequestLengthInstance,
-    ): Promise<FetchedRequestLength>
+  getRequestLength(
+    instance: TGetRequestLengthInstance
+  ): Promise<FetchedRequestLength>;
 
-    getRequest(
-      instance: TGetRequestInstance,
-      length: number,
-    ): Promise<FetchedRequest>
+  getRequest(
+    instance: TGetRequestInstance,
+    length: number
+  ): Promise<FetchedRequest>;
 
-    respondWithError(
-      instance: TRespondWithErrorInstance,
-      error: ErrorResponse,
-    ): Promise<void>
+  respondWithError(
+    instance: TRespondWithErrorInstance,
+    error: ErrorResponse
+  ): Promise<void>;
 
-    respond(
-      instance: TRespondInstance,
-      sessionUuidIfNew: null | string,
-      response: Json,
-    ): Promise<void>
-  }
+  respond(
+    instance: TRespondInstance,
+    sessionUuidIfNew: null | string,
+    response: Json
+  ): Promise<void>;
+};
 
-export default Channel
+export default Channel;

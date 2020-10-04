@@ -13,14 +13,16 @@
   "files": [
     "**/*.js",
     "**/*.d.ts",
-    "!**/*-tests.*",
-    "migrations/**/*.sql"
+    "!**/unit.*"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jameswilddev/neurofoam"
   },
   "license": "MIT",
+  "dependencies": {
+    "typescript": "3.4.3"
+  },
   "scripts": {
     "postinstall": "echo This is a stub package.  You probably want a @neurofoam/* package instead."
   }

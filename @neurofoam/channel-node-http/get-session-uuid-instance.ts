@@ -1,9 +1,9 @@
 type GetSessionUuidInstance = {
   readonly request: {
     readonly headers: {
-      readonly authorization?: string
-    }
-  }
-}
+      readonly authorization?: string;
+    };
+  };
+};
 
-export default GetSessionUuidInstance
+export default GetSessionUuidInstance;

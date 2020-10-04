@@ -1,13 +1,13 @@
 type FetchedRequestLength =
   | {
-    readonly type: `given`
-    readonly length: number
-  }
+      readonly type: `given`;
+      readonly length: number;
+    }
   | {
-    readonly type: `none`
-  }
+      readonly type: `none`;
+    }
   | {
-    readonly type: `invalid`
-  }
+      readonly type: `invalid`;
+    };
 
-export default FetchedRequestLength
+export default FetchedRequestLength;

@@ -13,6 +13,7 @@ jobs:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
     - run: npm ci
+    - run: npm run-script buildLintFix
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
     - run: git config user.email jameswilddev@outlook.com
@@ -37,6 +38,7 @@ jobs:
         java-package: jdk
         architecture: x64
     - run: npm ci
+    - run: npm run-script buildLint
     - run: npm run-script buildToolsTypeScript
     - run: npm run-script buildToolsRun
     - run: npm run-script buildTypeScript

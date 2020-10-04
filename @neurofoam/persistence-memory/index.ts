@@ -1,29 +1,30 @@
-import * as neurofoamTypes from "@neurofoam/types"
+import * as neurofoamTypes from "@neurofoam/types";
 
-export default class <
+export default class<
   TState extends neurofoamTypes.Json,
-  TEvent extends neurofoamTypes.Json,
-  > implements neurofoamTypes.Persistence<TState, TEvent> {
+  TEvent extends neurofoamTypes.Json
+> implements neurofoamTypes.Persistence<TState, TEvent> {
   private readonly bubbles: {
     [bubbleUuid: string]: {
-      readonly currentState: TState
-      readonly latestEventUuid: string
-    }
-  } = {}
+      readonly currentState: TState;
+      readonly latestEventUuid: string;
+    };
+  } = {};
 
   async initialize(): Promise<void> {
+    /* No initialization required. */
   }
 
   async getBubble(
-    bubbleUuid: string,
+    bubbleUuid: string
   ): Promise<null | {
-    readonly currentState: TState
-    readonly latestEventUuid: string
+    readonly currentState: TState;
+    readonly latestEventUuid: string;
   }> {
     if (Object.prototype.hasOwnProperty.call(this.bubbles, bubbleUuid)) {
-      return this.bubbles[bubbleUuid]
+      return this.bubbles[bubbleUuid];
     } else {
-      return null
+      return null;
     }
   }
 
@@ -32,19 +33,19 @@ export default class <
     eventUuid: string,
     sessionUuid: string,
     event: TEvent,
-    resultingState: TState,
+    resultingState: TState
   ): Promise<neurofoamTypes.PersistenceResult> {
-    sessionUuid
-    event
+    sessionUuid;
+    event;
 
     if (Object.prototype.hasOwnProperty.call(this.bubbles, bubbleUuid)) {
-      return `optimisticConcurrencyControlCollision`
+      return `optimisticConcurrencyControlCollision`;
     } else {
       this.bubbles[bubbleUuid] = {
         currentState: resultingState,
         latestEventUuid: eventUuid,
-      }
-      return `successful`
+      };
+      return `successful`;
     }
   }
 
@@ -54,21 +55,21 @@ export default class <
     nextEventUuid: string,
     sessionUuid: string,
     event: TEvent,
-    resultingState: TState,
+    resultingState: TState
   ): Promise<neurofoamTypes.PersistenceResult> {
-    sessionUuid
-    event
+    sessionUuid;
+    event;
 
-    const bubble = this.bubbles[bubbleUuid]
+    const bubble = this.bubbles[bubbleUuid];
 
     if (bubble.latestEventUuid !== previousEventUuid) {
-      return `optimisticConcurrencyControlCollision`
+      return `optimisticConcurrencyControlCollision`;
     } else {
       this.bubbles[bubbleUuid] = {
         currentState: resultingState,
         latestEventUuid: nextEventUuid,
-      }
-      return `successful`
+      };
+      return `successful`;
     }
   }
 }

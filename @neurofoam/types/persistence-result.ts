@@ -1,5 +1,3 @@
-type PersistenceResult =
-  | `successful`
-  | `optimisticConcurrencyControlCollision`
+type PersistenceResult = `successful` | `optimisticConcurrencyControlCollision`;
 
-export default PersistenceResult
+export default PersistenceResult;

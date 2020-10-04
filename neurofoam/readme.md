@@ -4,7 +4,15 @@ This is a stub package.  You probably want a @neurofoam/* package instead.
 
 ## Dependencies
 
-This package has no runtime dependencies.
+This package has the following runtime dependencies:
+
+Name       | Version                                                                                          
+---------- | -------------------------------------------------------------------------------------------------
+typescript | [![3.4.3](https://img.shields.io/npm/v/typescript.svg)](https://www.npmjs.com/package/typescript)
+
+## Peer Dependencies
+
+This package has no runtime peer dependencies (it does not expect any other packages to be installed alongside itself).
 
 ## License
 

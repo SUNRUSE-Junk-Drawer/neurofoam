@@ -1,10 +1,8 @@
-import Json from "./json"
+import Json from "./json";
 
-type RequestResult<
-  TEvent extends Json,
-  > = {
-    readonly response: Json
-    readonly event: null | TEvent
-  }
+type RequestResult<TEvent extends Json> = {
+  readonly response: Json;
+  readonly event: null | TEvent;
+};
 
-export default RequestResult
+export default RequestResult;

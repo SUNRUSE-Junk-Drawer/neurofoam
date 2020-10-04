@@ -1,12 +1,12 @@
-import processAll from "./process-all"
+import { processAll } from "./process-all";
 
 processAll()
   .then(() => {
-    console.log(`Done`)
-    process.exit(0)
+    console.log(`Done`);
+    process.exit(0);
   })
-  .catch(error => {
-    console.error(`Failed.`)
-    console.error(error)
-    process.exit(1)
-  })
+  .catch((error) => {
+    console.error(`Failed.`);
+    console.error(error);
+    process.exit(1);
+  });
