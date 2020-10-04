@@ -147,7 +147,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
           },
           eventTableSettings
         );
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -196,7 +196,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
             },
           }
         );
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -256,7 +256,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         );
 
         await instance.initialize();
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -482,7 +482,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
           { eventValue: `Test Event Value O` },
           { stateValue: `Test State Value O` }
         );
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -765,7 +765,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
         );
 
         await instance.initialize();
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -928,7 +928,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
           bubbleTableSettings,
           eventTableSettings
         );
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
@@ -989,7 +989,7 @@ describe(`@neurofoam/persistence-dynamodb`, () => {
           bubbleTableSettings,
           eventTableSettings
         );
-      }, 20000);
+      }, 30000);
 
       afterAll(async () => {
         dynamoDbProcess.kill();
