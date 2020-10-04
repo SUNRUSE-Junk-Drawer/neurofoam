@@ -19,5 +19,8 @@
     "type": "git",
     "url": "https://github.com/jameswilddev/neurofoam"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "echo This package is no longer supported."
+  }
 }
