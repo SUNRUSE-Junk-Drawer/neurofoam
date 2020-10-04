@@ -1,6 +1,8 @@
 const regex = /(?:^|,)\s*(?:utf-8|\*)\s*(?:$|;|,)/i;
 
-export default function (acceptCharset: undefined | string): boolean {
+export function isAcceptCharsetHeaderValid(
+  acceptCharset: undefined | string
+): boolean {
   if (acceptCharset === undefined) {
     return true;
   }

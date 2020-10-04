@@ -1,10 +1,10 @@
 import * as path from "path";
 import * as neurofoamTypes from "@neurofoam/types";
 
-import using from "./using";
-import usingTransaction from "./using-transaction";
+import { using } from "./using";
+import { usingTransaction } from "./using-transaction";
 
-export default class<
+export class NeurofoamPersistenceSqlite<
   TState extends neurofoamTypes.Json,
   TEvent extends neurofoamTypes.Json
 > implements neurofoamTypes.Persistence<TState, TEvent> {

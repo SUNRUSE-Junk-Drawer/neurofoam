@@ -1,6 +1,6 @@
 import * as neurofoamTypes from "@neurofoam/types";
-import ExecutableRequest from "../executable-request";
-import executeOnce from ".";
+import { ExecutableRequest } from "../executable-request";
+import { executeOnce } from ".";
 
 type TestState =
   | `Test Initial State`

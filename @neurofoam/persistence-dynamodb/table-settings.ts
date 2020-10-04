@@ -17,11 +17,9 @@ type EncryptionSettings =
       readonly masterKeyId: string;
     };
 
-type TableSettings = {
+export type TableSettings = {
   readonly tableName: string;
   readonly billing: BillingSettings;
   readonly encryption: EncryptionSettings;
   readonly tags: { readonly [key: string]: string };
 };
-
-export default TableSettings;

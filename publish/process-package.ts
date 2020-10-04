@@ -2,7 +2,9 @@ import * as fs from "fs";
 import * as path from "path";
 import { runCommandLine } from "../build/run-command-line";
 
-export default async function (name: ReadonlyArray<string>): Promise<void> {
+export async function processPackage(
+  name: ReadonlyArray<string>
+): Promise<void> {
   console.log(`Processing package "${name.join(`/`)}"...`);
 
   console.log(`Checking for latest published version...`);

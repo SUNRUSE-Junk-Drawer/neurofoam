@@ -1,8 +1,8 @@
 import * as jsonschema from "jsonschema";
-import Json from "./json";
-import RequestResult from "./request-result";
+import { Json } from "./json";
+import { RequestResult } from "./request-result";
 
-type Application<
+export type Application<
   TState extends Json,
   TEvent extends Json,
   TRequest extends Json
@@ -21,5 +21,3 @@ type Application<
 
   applyEvent(state: TState, event: TEvent): TState;
 };
-
-export default Application;

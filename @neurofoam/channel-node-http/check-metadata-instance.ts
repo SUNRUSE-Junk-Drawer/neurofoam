@@ -14,9 +14,7 @@ type CheckMetadataInstanceResponse = {
   end(callback: () => void): CheckMetadataInstanceResponse;
 };
 
-type CheckMetadataInstance = {
+export type CheckMetadataInstance = {
   readonly request: CheckMetadataInstanceRequest;
   readonly response: CheckMetadataInstanceResponse;
 };
-
-export default CheckMetadataInstance;

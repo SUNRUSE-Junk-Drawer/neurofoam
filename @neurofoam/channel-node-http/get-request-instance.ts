@@ -33,8 +33,6 @@ type GetRequestInstanceRequest = {
   ): GetRequestInstanceRequest;
 };
 
-type GetRequestInstance = {
+export type GetRequestInstance = {
   readonly request: GetRequestInstanceRequest;
 };
-
-export default GetRequestInstance;

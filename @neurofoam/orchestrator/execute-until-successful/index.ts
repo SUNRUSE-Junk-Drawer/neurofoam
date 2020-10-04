@@ -1,8 +1,8 @@
 import * as neurofoamTypes from "@neurofoam/types";
-import ExecutableRequest from "../executable-request";
-import executeOnce from "../execute-once";
+import { ExecutableRequest } from "../executable-request";
+import { executeOnce } from "../execute-once";
 
-export default async function <
+export async function executeUntilSuccessful<
   TState extends neurofoamTypes.Json,
   TEvent extends neurofoamTypes.Json,
   TRequest extends neurofoamTypes.Json

@@ -1,4 +1,4 @@
-import isAcceptCharsetHeaderValid from ".";
+import { isAcceptCharsetHeaderValid } from ".";
 
 describe(`@neurofoam/channel-node-http`, () => {
   describe(`isAcceptCharsetHeaderValid`, () => {

@@ -1,7 +1,7 @@
 import * as fs from "fs";
-import processPackage from "./process-package";
+import { processPackage } from "./process-package";
 
-export default async function (): Promise<void> {
+export async function processAll(): Promise<void> {
   await processPackage([`neurofoam`]);
 
   console.log(`Publishing namespaced packages...`);

@@ -8,8 +8,6 @@ type RespondInstanceResponse = {
   end(data: string, callback: () => void): RespondInstanceResponse;
 };
 
-type RespondInstance = {
+export type RespondInstance = {
   readonly response: RespondInstanceResponse;
 };
-
-export default RespondInstance;

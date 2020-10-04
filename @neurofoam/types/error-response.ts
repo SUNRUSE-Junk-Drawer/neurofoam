@@ -1,4 +1,4 @@
-type ErrorResponse =
+export type ErrorResponse =
   | `invalidBubbleUuid`
   | `invalidSessionUuid`
   | `requestTooShort`
@@ -11,5 +11,3 @@ type ErrorResponse =
   | `requestShorterThanIndicated`
   | `requestLongerThanIndicated`
   | `invalidRequestLength`;
-
-export default ErrorResponse;

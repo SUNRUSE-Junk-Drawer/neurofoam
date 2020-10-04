@@ -3,7 +3,7 @@ import * as crypto from "crypto";
 
 const cryptoRandomBytes = util.promisify(crypto.randomBytes).bind(crypto);
 
-export default async function (): Promise<string> {
+export async function generateUuid(): Promise<string> {
   const buffer = await cryptoRandomBytes(16);
   const hex = buffer.toString(`hex`);
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(

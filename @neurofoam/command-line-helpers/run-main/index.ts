@@ -1,4 +1,4 @@
-export default function (main: () => Promise<void>): void {
+export function runMain(main: () => Promise<void>): void {
   main().then(
     () => {
       process.exit(0);

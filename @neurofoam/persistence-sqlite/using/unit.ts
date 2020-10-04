@@ -2,7 +2,7 @@ import * as os from "os";
 import * as fs from "fs";
 import * as path from "path";
 import * as sqlite from "sqlite";
-import using from ".";
+import { using } from ".";
 
 describe(`@neurofoam/persistence-sqlite`, () => {
   describe(`using`, () => {

@@ -10,7 +10,7 @@ import "./respond-instance";
 import "./node-http-instance";
 
 import * as neurofoamTypes from "@neurofoam/types";
-import NeurofoamChannelNodeHttp from ".";
+import { NeurofoamChannelNodeHttp } from ".";
 
 describe(`@neurofoam/channel-node-http`, () => {
   describe(`index`, () => {

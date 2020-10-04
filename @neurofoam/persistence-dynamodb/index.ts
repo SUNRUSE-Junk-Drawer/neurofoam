@@ -1,10 +1,10 @@
 import * as awsSdk from "aws-sdk";
 import * as neurofoamTypes from "@neurofoam/types";
-import TableSettings from "./table-settings";
-import BubbleTableSettings from "./bubble-table-settings";
-import EventTableSettings from "./event-table-settings";
+import { TableSettings } from "./table-settings";
+import { BubbleTableSettings } from "./bubble-table-settings";
+import { EventTableSettings } from "./event-table-settings";
 
-export default class<
+export class NeurofoamPersistenceDynamoDb<
   TState extends neurofoamTypes.Json,
   TEvent extends neurofoamTypes.Json
 > implements neurofoamTypes.Persistence<TState, TEvent> {

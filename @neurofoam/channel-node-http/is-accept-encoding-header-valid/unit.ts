@@ -1,4 +1,4 @@
-import isAcceptEncodingHeaderValid from ".";
+import { isAcceptEncodingHeaderValid } from ".";
 
 describe(`@neurofoam/channel-node-http`, () => {
   describe(`isAcceptEncodingHeaderValid`, () => {

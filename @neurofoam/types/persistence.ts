@@ -1,7 +1,7 @@
-import Json from "./json";
-import PersistenceResult from "./persistence-result";
+import { Json } from "./json";
+import { PersistenceResult } from "./persistence-result";
 
-type Persistence<TState extends Json, TEvent extends Json> = {
+export type Persistence<TState extends Json, TEvent extends Json> = {
   initialize(): Promise<void>;
 
   getBubble(
@@ -28,5 +28,3 @@ type Persistence<TState extends Json, TEvent extends Json> = {
     resultingState: TState
   ): Promise<PersistenceResult>;
 };
-
-export default Persistence;

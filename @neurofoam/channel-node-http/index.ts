@@ -1,19 +1,18 @@
 import * as url from "url";
 import * as neurofoamTypes from "@neurofoam/types";
-import decodeUtf8 from "./decode-utf8";
-import GetBubbleUuidInstance from "./get-bubble-uuid-instance";
-import GetSessionUuidInstance from "./get-session-uuid-instance";
-import CheckMetadataInstance from "./check-metadata-instance";
-import GetRequestLengthInstance from "./get-request-length-instance";
-import GetRequestInstance from "./get-request-instance";
-import GetRequestInstanceRequest from "./get-request-instance";
-import RespondWithErrorInstance from "./respond-with-error-instance";
-import RespondInstance from "./respond-instance";
-import isContentTypeHeaderValid from "./is-content-type-header-valid";
-import isContentEncodingHeaderValid from "./is-content-encoding-header-valid";
-import isAcceptHeaderValid from "./is-accept-header-valid";
-import isAcceptCharsetHeaderValid from "./is-accept-charset-header-valid";
-import isAcceptEncodingHeaderValid from "./is-accept-encoding-header-valid";
+import { decodeUtf8 } from "./decode-utf8";
+import { GetBubbleUuidInstance } from "./get-bubble-uuid-instance";
+import { GetSessionUuidInstance } from "./get-session-uuid-instance";
+import { CheckMetadataInstance } from "./check-metadata-instance";
+import { GetRequestLengthInstance } from "./get-request-length-instance";
+import { GetRequestInstance } from "./get-request-instance";
+import { RespondWithErrorInstance } from "./respond-with-error-instance";
+import { RespondInstance } from "./respond-instance";
+import { isContentTypeHeaderValid } from "./is-content-type-header-valid";
+import { isContentEncodingHeaderValid } from "./is-content-encoding-header-valid";
+import { isAcceptHeaderValid } from "./is-accept-header-valid";
+import { isAcceptCharsetHeaderValid } from "./is-accept-charset-header-valid";
+import { isAcceptEncodingHeaderValid } from "./is-accept-encoding-header-valid";
 
 const authorizationRegex = /^\s*BEARER\s+(.*)\s*$/i;
 const contentLengthRegex = /^\s*\d+\s*$/;
@@ -33,14 +32,14 @@ const errorResponseStatusCodeMappings: {
   invalidRequestLength: 400,
 };
 
-export default class
+export class NeurofoamChannelNodeHttp
   implements
     neurofoamTypes.Channel<
       GetBubbleUuidInstance,
       GetSessionUuidInstance,
       CheckMetadataInstance,
       GetRequestLengthInstance,
-      GetRequestInstanceRequest,
+      GetRequestInstance,
       RespondWithErrorInstance,
       RespondInstance
     > {

@@ -1,4 +1,4 @@
-type FetchedRequest =
+export type FetchedRequest =
   | {
       readonly type: `successful`;
       readonly request: string;
@@ -18,5 +18,3 @@ type FetchedRequest =
   | {
       readonly type: `error`;
     };
-
-export default FetchedRequest;

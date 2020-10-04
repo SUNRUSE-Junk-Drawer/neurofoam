@@ -1,8 +1,8 @@
 import * as neurofoamTypes from "@neurofoam/types";
-import ExecutableRequest from "../executable-request";
-import generateUuid from "../generate-uuid";
+import { ExecutableRequest } from "../executable-request";
+import { generateUuid } from "../generate-uuid";
 
-export default async function <
+export async function executeOnce<
   TState extends neurofoamTypes.Json,
   TEvent extends neurofoamTypes.Json,
   TRequest extends neurofoamTypes.Json

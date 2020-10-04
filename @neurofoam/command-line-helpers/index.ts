@@ -1,3 +1,3 @@
-export { default as runMain } from "./run-main";
+export { runMain } from "./run-main";
 
-export { default as parseCommandLineArguments } from "./parse-command-line-arguments";
+export { parseCommandLineArguments } from "./parse-command-line-arguments";

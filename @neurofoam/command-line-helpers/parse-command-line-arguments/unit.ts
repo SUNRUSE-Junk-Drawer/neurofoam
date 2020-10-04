@@ -1,5 +1,5 @@
-import CommandLineParameterSet from "../command-line-parameter-set";
-import CommandLineArgumentSet from "../command-line-argument-set";
+import { CommandLineParameterSet } from "../command-line-parameter-set";
+import { CommandLineArgumentSet } from "../command-line-argument-set";
 import { parseCommandLineArguments } from "..";
 
 describe(`@neurofoam/command-line-helpers`, () => {

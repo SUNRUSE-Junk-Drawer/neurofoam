@@ -1,4 +1,4 @@
-import decodeUtf8 from ".";
+import { decodeUtf8 } from ".";
 
 describe(`@neurofoam/channel-node-http`, () => {
   describe(`decodeUtf8`, () => {

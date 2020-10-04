@@ -2,7 +2,7 @@ import * as os from "os";
 import * as fs from "fs";
 import * as path from "path";
 import * as neurofoamTypes from "@neurofoam/types";
-import NeurofoamPersistenceSqlite from ".";
+import { NeurofoamPersistenceSqlite } from ".";
 
 describe(`@neurofoam/persistence-sqlite`, () => {
   describe(`index`, () => {

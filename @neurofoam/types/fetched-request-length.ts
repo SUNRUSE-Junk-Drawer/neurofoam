@@ -1,4 +1,4 @@
-type FetchedRequestLength =
+export type FetchedRequestLength =
   | {
       readonly type: `given`;
       readonly length: number;
@@ -9,5 +9,3 @@ type FetchedRequestLength =
   | {
       readonly type: `invalid`;
     };
-
-export default FetchedRequestLength;

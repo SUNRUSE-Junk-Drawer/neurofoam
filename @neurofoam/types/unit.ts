@@ -12,4 +12,3 @@ import "./fetched-session-uuid";
 import "./fetched-request-length";
 import "./fetched-request";
 import "./channel";
-import "./cache";

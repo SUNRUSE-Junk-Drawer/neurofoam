@@ -1,11 +1,11 @@
-import Json from "./json";
-import ErrorResponse from "./error-response";
-import FetchedBubbleUuid from "./fetched-bubble-uuid";
-import FetchedSessionUuid from "./fetched-session-uuid";
-import FetchedRequestLength from "./fetched-request-length";
-import FetchedRequest from "./fetched-request";
+import { Json } from "./json";
+import { ErrorResponse } from "./error-response";
+import { FetchedBubbleUuid } from "./fetched-bubble-uuid";
+import { FetchedSessionUuid } from "./fetched-session-uuid";
+import { FetchedRequestLength } from "./fetched-request-length";
+import { FetchedRequest } from "./fetched-request";
 
-type Channel<
+export type Channel<
   TGetBubbleUuidInstance,
   TGetSessionUuidInstance,
   TCheckMetadataInstance,
@@ -42,5 +42,3 @@ type Channel<
     response: Json
   ): Promise<void>;
 };
-
-export default Channel;

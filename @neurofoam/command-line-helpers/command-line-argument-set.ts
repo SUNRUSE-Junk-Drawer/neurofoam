@@ -1,4 +1,4 @@
-type CommandLineArgumentSet<
+export type CommandLineArgumentSet<
   TStringKey extends string,
   TIntegerKey extends string
 > = {
@@ -9,5 +9,3 @@ type CommandLineArgumentSet<
     readonly [TKey in TIntegerKey]: number;
   };
 };
-
-export default CommandLineArgumentSet;

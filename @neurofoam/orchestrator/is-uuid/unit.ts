@@ -1,4 +1,4 @@
-import isUuid from ".";
+import { isUuid } from ".";
 
 describe(`@neurofoam/orchestrator`, () => {
   describe(`isUuid`, () => {

@@ -1,6 +1,6 @@
-import TableSettings from "./table-settings";
+import { TableSettings } from "./table-settings";
 
-type EventTableSettings = TableSettings & {
+export type EventTableSettings = TableSettings & {
   readonly attributeNames: {
     readonly eventUuid: string;
     readonly previousEventUuid: string;
@@ -10,5 +10,3 @@ type EventTableSettings = TableSettings & {
     readonly recorded: string;
   };
 };
-
-export default EventTableSettings;

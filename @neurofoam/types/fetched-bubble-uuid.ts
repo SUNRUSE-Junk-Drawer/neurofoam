@@ -1,4 +1,4 @@
-type FetchedBubbleUuid =
+export type FetchedBubbleUuid =
   | {
       readonly type: `given`;
       readonly bubbleUuid: string;
@@ -6,5 +6,3 @@ type FetchedBubbleUuid =
   | {
       readonly type: `invalid`;
     };
-
-export default FetchedBubbleUuid;

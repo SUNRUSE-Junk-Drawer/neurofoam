@@ -8,9 +8,9 @@ import * as childProcess from "child_process";
 import * as awsSdk from "aws-sdk";
 import * as localDynamo from "local-dynamo";
 import * as neurofoamTypes from "@neurofoam/types";
-import BubbleTableSettings from "./bubble-table-settings";
-import EventTableSettings from "./event-table-settings";
-import NeurofoamPersistenceDynamoDb from ".";
+import { BubbleTableSettings } from "./bubble-table-settings";
+import { EventTableSettings } from "./event-table-settings";
+import { NeurofoamPersistenceDynamoDb } from ".";
 
 describe(`@neurofoam/persistence-dynamodb`, () => {
   describe(`index`, () => {

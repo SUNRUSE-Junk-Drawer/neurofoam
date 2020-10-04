@@ -1,5 +1,5 @@
 import * as neurofoamTypes from "@neurofoam/types";
-import NeurofoamPersistenceMemory from ".";
+import { NeurofoamPersistenceMemory } from ".";
 
 describe(`@neurofoam/persistence-memory`, () => {
   describe(`index`, () => {

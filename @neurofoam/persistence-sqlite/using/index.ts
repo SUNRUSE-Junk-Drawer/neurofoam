@@ -1,7 +1,7 @@
 import * as sqlite from "sqlite";
 import * as sqlite3 from "sqlite3";
 
-export default async function <T>(
+export async function using<T>(
   filename: string,
   body: (database: sqlite.Database) => Promise<T>
 ): Promise<T> {

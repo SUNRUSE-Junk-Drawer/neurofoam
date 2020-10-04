@@ -1,4 +1,4 @@
-type CommandLineParameterSet<
+export type CommandLineParameterSet<
   TStringKey extends string,
   TIntegerKey extends string
 > = {
@@ -29,5 +29,3 @@ type CommandLineParameterSet<
     };
   };
 };
-
-export default CommandLineParameterSet;

@@ -1,6 +1,6 @@
 const regex = /(?:^|,)\s*(?:application|\*)\s*\/\s*(?:json|\*)(?:\s|,|;|$)/i;
 
-export default function (accept: undefined | string): boolean {
+export function isAcceptHeaderValid(accept: undefined | string): boolean {
   if (accept === undefined) {
     return true;
   }

@@ -1,6 +1,6 @@
 import * as neurofoamTypes from "@neurofoam/types";
 
-export default class<
+export class NeurofoamPersistenceMemory<
   TState extends neurofoamTypes.Json,
   TEvent extends neurofoamTypes.Json
 > implements neurofoamTypes.Persistence<TState, TEvent> {

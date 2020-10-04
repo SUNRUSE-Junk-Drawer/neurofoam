@@ -3,8 +3,8 @@ import * as fs from "fs";
 import * as path from "path";
 import * as sqlite from "sqlite";
 
-import using from "../using";
-import usingTransaction from "../using-transaction";
+import { using } from "../using";
+import { usingTransaction } from "../using-transaction";
 
 describe(`@neurofoam/persistence-sqlite`, () => {
   describe(`usingTransaction`, () => {

@@ -3,8 +3,6 @@ type RespondWithErrorInstanceResponse = {
   end(callback: () => void): RespondWithErrorInstanceResponse;
 };
 
-type RespondWithErrorInstance = {
+export type RespondWithErrorInstance = {
   readonly response: RespondWithErrorInstanceResponse;
 };
-
-export default RespondWithErrorInstance;

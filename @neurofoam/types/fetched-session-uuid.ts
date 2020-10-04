@@ -1,4 +1,4 @@
-type FetchedSessionUuid =
+export type FetchedSessionUuid =
   | {
       readonly type: `given`;
       readonly sessionUuid: string;
@@ -9,5 +9,3 @@ type FetchedSessionUuid =
   | {
       readonly type: `invalid`;
     };
-
-export default FetchedSessionUuid;

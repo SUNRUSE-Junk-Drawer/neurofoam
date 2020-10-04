@@ -1,5 +1,5 @@
-import CommandLineParameterSet from "../command-line-parameter-set";
-import CommandLineArgumentSet from "../command-line-argument-set";
+import { CommandLineParameterSet } from "../command-line-parameter-set";
+import { CommandLineArgumentSet } from "../command-line-argument-set";
 
 function fail(message: string): void {
   console.error(message);
@@ -9,7 +9,10 @@ function fail(message: string): void {
   throw process.exit(1);
 }
 
-export default function <TStringKey extends string, TIntegerKey extends string>(
+export function parseCommandLineArguments<
+  TStringKey extends string,
+  TIntegerKey extends string
+>(
   name: string,
   helpText: string,
   commandLineParameterSet: CommandLineParameterSet<TStringKey, TIntegerKey>

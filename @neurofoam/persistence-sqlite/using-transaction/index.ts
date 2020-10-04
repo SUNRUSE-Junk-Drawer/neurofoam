@@ -1,7 +1,7 @@
 import * as sqlite from "sqlite";
-import using from "../using";
+import { using } from "../using";
 
-export default async function <T>(
+export async function usingTransaction<T>(
   filename: string,
   body: (database: sqlite.Database) => Promise<T>
 ): Promise<T> {

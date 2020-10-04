@@ -1,4 +1,4 @@
-import processAll from "./process-all";
+import { processAll } from "./process-all";
 
 processAll()
   .then(() => {
