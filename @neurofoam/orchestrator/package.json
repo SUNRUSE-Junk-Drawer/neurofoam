@@ -1,6 +1,6 @@
 {
   "name": "@neurofoam/orchestrator",
-  "description": "Connects a set of Neurofoam type implementations to make a running application.",
+  "description": "Connects a set of Neurofoam type implementations to handle an incoming request.",
   "version": "0.0.0",
   "engines": {
     "node": ">=12.13.0"
