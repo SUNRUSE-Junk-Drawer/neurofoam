@@ -1,6 +1,6 @@
 {
   "name": "@neurofoam/channel-node-http",
-  "description": "A Neurofoam channel implementation which works with Node HTTP request/responses.",
+  "description": "A Neurofoam channel implementation which works with the ws package to accept WebSocket connections.",
   "version": "0.0.2",
   "engines": {
     "node": ">=12.13.0"
@@ -21,7 +21,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@neurofoam/types": "0.0.16"
+    "@neurofoam/types": "0.0.16",
+    "@types/ws": "5.1.0"
   },
-  "types": "index.d.ts"
+  "peerDependencies": {
+    "ws": "7.3.1"
+  }
 }
