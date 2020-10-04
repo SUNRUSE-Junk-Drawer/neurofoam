@@ -9,7 +9,8 @@ export type LogPersistence<
     readonly [TCommand in keyof TCommands]: (
       instance: string,
       session: string,
-      payload: TCommands[TCommand]
+      payload: TCommands[TCommand],
+      date: Date
     ) => Promise<void>;
   };
 };
