@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@neurofoam/types": "0.0.16",
+    "@neurofoam/types": "0.0.18",
     "@types/ws": "7.2.7"
   },
   "peerDependencies": {

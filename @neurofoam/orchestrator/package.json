@@ -24,6 +24,6 @@
     "jsonschema": "1.2.8"
   },
   "devDependencies": {
-    "@neurofoam/types": "0.0.16"
+    "@neurofoam/types": "0.0.18"
   }
 }
