@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "sqlite": "4.0.15",
-    "sqlite3": "5.0.0"
+    "sqlite3": "5.0.2"
   },
   "devDependencies": {
     "@neurofoam/types": "0.0.16"
